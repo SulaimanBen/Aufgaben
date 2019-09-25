@@ -1,7 +1,7 @@
 package Klassen_Geometrie;
 
 /*
- *  Es soll Kreise geben können. Jeder Kreis soll ein Radius haben.
+ *  Es soll Kreise geben kÃ¶nnen. Jeder Kreis soll ein Radius haben.
  */
 public class Kreise {
 	

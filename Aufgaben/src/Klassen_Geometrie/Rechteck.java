@@ -1,43 +1,44 @@
 package Klassen_Geometrie;
 
 /*
- *  Führen Sie den Begriff "Rechteck" in einem Projekt ein. Ein Rechteck hat Breite und Höhe.
+ *  FÃ¼hren Sie den Begriff "Rechteck" in einem Projekt ein. Ein Rechteck hat Breite und HÃ¶he.
  */
 public class Rechteck {
 
-	int Breite, Höhe;
+	int Breite, HÃ¶he;
 	
 	
-	//Ein Rechteck soll es ermöglichen seine Maße auf der Konsole auszugeben.
+	//Ein Rechteck soll es ermÃ¶glichen seine MaÃŸe auf der Konsole auszugeben.
 	
 	static void RechteckMasse(Rechteck rechteck) {
-		System.out.println("Die Maße der Reckteck mit Brite :"+rechteck.Breite+" Und Höhe : "+rechteck.Höhe+ " ="+(rechteck.Breite*rechteck.Höhe));
+		System.out.println("Die MaÃŸe der Reckteck mit Brite :"+rechteck.Breite+" Und HÃ¶he : "+rechteck.HÃ¶he+ " ="
+				+(rechteck.Breite*rechteck.HÃ¶he));
 	}
 	
 	// Statische Methode
-   static void setRechteckesDimensionenStatisch(Rechteck rechteck,int Breite,int Höhe) {
+   static void setRechteckesDimensionenStatisch(Rechteck rechteck,int Breite,int HÃ¶he) {
 		rechteck.Breite=Breite;
-		rechteck.Höhe=Höhe;
-		System.out.println("New RechteckesvDimensionen "+rechteck.Breite + "  "+rechteck.Höhe);
+		rechteck.HÃ¶he=HÃ¶he;
+		System.out.println("New RechteckesvDimensionen "+rechteck.Breite + "  "+rechteck.HÃ¶he);
 	}
    // NICHT-statische Methode
-   void setRechteckesDimensionen(int Breite,int Höhe) {
+   void setRechteckesDimensionen(int Breite,int HÃ¶he) {
 	   this.Breite=Breite;
-	   this.Höhe= Höhe;
-	   System.out.println("New RechteckesvDimensionen " +this.Breite + "  "+this.Höhe);
+	   this.HÃ¶he= HÃ¶he;
+	   System.out.println("New RechteckesvDimensionen " +this.Breite + "  "+this.HÃ¶he);
    }
    
    /*
-    *  Erzeugen Sie 100 Rechtecke mit zufälligen Breiten und Höhen.
-    *  Die Werte für die Breite und Höhe müssen aber aus dem Bereich zwischen 1 und 20 gewählt werden.
+    *  Erzeugen Sie 100 Rechtecke mit zufÃ¤lligen Breiten und HÃ¶hen.
+    *  Die Werte fÃ¼r die Breite und HÃ¶he mÃ¼ssen aber aus dem Bereich zwischen 1 und 20 gewÃ¤hlt werden.
     *  Geben Sie auf der Konsole die Informationen zu den erzeugten Objekten in etwa so aus:
     */
    
-   void setZufälligenRechteckesDimensionen() {
+   void setZufÃ¤lligenRechteckesDimensionen() {
 	   for(int i=1;i <= 100; i++) {
 		   this.Breite=(int)(Math.random()*(20-1)+1)+1;
-		   this.Höhe=(int)(Math.random()*(20-1)+1)+1;
-		   System.out.println(i+". Rechteck "+"("+this.Breite+" * "+this.Höhe+") ="+this.Breite*this.Höhe);
+		   this.HÃ¶he=(int)(Math.random()*(20-1)+1)+1;
+		   System.out.println(i+". Rechteck "+"("+this.Breite+" * "+this.HÃ¶he+") ="+this.Breite*this.HÃ¶he);
 	   }
    }
 	
