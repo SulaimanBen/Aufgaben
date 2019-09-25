@@ -5,8 +5,11 @@ public class AufgabeTiere {
 	
 	public static void main(String[] args) {
 		
-		Hund h1=new Hund("h1", 1);
-		Hund h2=new Hund("h2", 2,"+");
+		Hund h1=new Hund("Lord", 1,"Ben");
+		Hund h2=new Hund("Lord", 1,"Ben");
+		
+		//h1.alter=5; Private int alter  : ist nicht sichtbar
+		
 		
 		System.out.println(h1 == h2);
 		
@@ -38,9 +41,8 @@ class Hund{
 	}
 	
 	public boolean equals(Object Obj) {
-		Hund H2=(Hund)Obj;
-		Hund H1=(Hund)Obj;
-		return H1 == H2;
+		Hund h1=(Hund)Obj;
+		return h1.name.equals(h1.name) && h1.alter == alter && h1.besitzer == besitzer;
 	}
 	
 	
