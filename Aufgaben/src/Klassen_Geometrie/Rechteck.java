@@ -16,15 +16,15 @@ public class Rechteck {
 	}
 	
 	// Statische Methode
-   static void setRechteckesDimensionenStatisch(Rechteck rechteck,int Breite,int Höhe) {
+   static void changeRechteckesDimensionenStatisch(Rechteck rechteck,int Breite,int Höhe) {
 		rechteck.Breite=Breite;
 		rechteck.Höhe=Höhe;
 		System.out.println("New RechteckesvDimensionen "+rechteck.Breite + "  "+rechteck.Höhe);
 	}
    // NICHT-statische Methode
-   void setRechteckesDimensionen(int Breite,int Höhe) {
-	   this.Breite=Breite;
-	   this.Höhe= Höhe;
+   void setRechteckesDimensionen(int breite,int höhe) {
+	   Breite=breite;
+	   Höhe= höhe;
 	   System.out.println("New RechteckesvDimensionen " +this.Breite + "  "+this.Höhe);
    }
    
@@ -36,9 +36,9 @@ public class Rechteck {
    
    void setZufälligenRechteckesDimensionen() {
 	   for(int i=1;i <= 100; i++) {
-		   this.Breite=(int)(Math.random()*(20-1)+1)+1;
-		   this.Höhe=(int)(Math.random()*(20-1)+1)+1;
-		   System.out.println(i+". Rechteck "+"("+this.Breite+" * "+this.Höhe+") ="+this.Breite*this.Höhe);
+		   Breite=(int)(Math.random()*(20-1)+1)+1;
+		   Höhe=(int)(Math.random()*(20-1)+1)+1;
+		   System.out.println(i+". Rechteck "+"("+Breite+" * "+Höhe+") ="+Breite*Höhe);
 	   }
    }
 	

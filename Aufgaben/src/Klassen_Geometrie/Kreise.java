@@ -5,9 +5,9 @@ package Klassen_Geometrie;
  */
 public class Kreise {
 	
-	double Radius;
+	int Radius;
 	
-	 Kreise(double Radius) {
+	 Kreise(int Radius) {
 		this.Radius=Radius;
 		System.out.println("Kreise Radius =" +this.Radius);
 	}
