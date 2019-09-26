@@ -32,7 +32,7 @@ public class KlassenPerson {
 	 *  Testen Sie die Methode.
 	 */
 	
-	static String getMustermann() {
+	/*static String getMustermann() {
 		Person p=new Person(p.setVorname("Max"), p.setNachname("Mustermann"),p.setGeburtsjahr(1960),p.setPostleitzahl(12345));
 		p.setVorname("Max");
 		p.setNachname("Mustermann");
@@ -40,6 +40,6 @@ public class KlassenPerson {
 		p.setPostleitzahl(12345);
 		return p.getVorname()+" "+ p.getNachname()+" , Geburtsjahr : "+p.getGeburtsjahr()
 		+" , Plz : "+p.getPostleitzahl();
-	}
+	}*/
 
 }
