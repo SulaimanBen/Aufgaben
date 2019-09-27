@@ -2,7 +2,6 @@ package AufgabeArrayeinfach;
 
 public class ArrayEinfach {
 	
-	int min,max,len;
 	
 	public static void main(String[] args) {
 		
@@ -12,10 +11,10 @@ public class ArrayEinfach {
 		obj.printArray(arr);
 		System.out.println("****************************************");
 		
-		char ch[]=obj.deutscheBuchstaben();
+		char ch[]= obj.deutscheBuchstaben();		
 		
-		for(char c : ch) {
-			System.out.println(c);
+		for( char c : ch) {
+			System.out.print(c + " ");
 		}
 		
 	}
@@ -28,20 +27,16 @@ public class ArrayEinfach {
 	 */
 	
 	 int[] createArray(int min, int max ,int len) {
-		this.min=min;
-		this.max=max;
-		this.len=len;
-		int arr[]= new int[this.len];
-		for(int i=0; i < this.len; i++) {
-			arr[i]=(int)(Math.random()*(this.max-this.min)+1)+1;
+		int arr[]= new int[len];
+		for(int i=0; i < len; i++) {
+			arr[i]=(int)(Math.random()*(max-min)+1)+1;
 			}
 		return arr;
 	}
 	
-	// A 2 : Bitte geben Sie das erzeugte Array aus.Dafür definieren Sie eine weitere Methode printArray, an die Sie das Array übergeben.
+	// A 2 : Bitte geben Sie das erzeugte Array aus.DafÃ¼r definieren Sie eine weitere Methode printArray, an die Sie das Array ï¿½bergeben.
 	
 	 void printArray(int[] arr) {
-		arr=createArray(this.min,this.max,this.len);
 		
 		for(int array : arr) {
 			System.out.print(array + " ");
@@ -49,38 +44,34 @@ public class ArrayEinfach {
 		System.out.println();
 	}
 	 
-	 // A 3 : Definieren Sie eine statische Methode deutscheUmlaute, die ein Array mit den Zeichen 'ä', 'ö' und 'ü' zurück liefert.
+	 // A 3 : Definieren Sie eine statische Methode deutscheUmlaute, die ein Array mit den Zeichen 'Ã¤', 'Ã¶' und 'Ã¼' zurï¿½ck liefert.
 	 
 	 static char[] deutscheUmlaute() {
-		 char chUm[]= {'ä','ö','ü'};
-		 return chUm;
+		return  new char[]{'Ã¤','Ã¶','Ã¼'};
+		
 	 }
 	 
 	 /*
 	  *  A 4 : Definieren Sie eine statische Methode deutscheBuchstaben, 
-	  *  	   die ein Array mit allen deutschen Kleinbuchstaben inklusive Umlaute und 'ß' zurück liefert.
+	  *  	   die ein Array mit allen deutschen Kleinbuchstaben inklusive Umlaute und 'ÃŸ' zurÃ¼ck liefert.
 	  */
 	 
 	 static char[] deutscheBuchstaben() {
-		 int y = 0;
-		 char ch1[]=deutscheBuchstaben();
+		 int y=0;
+		 char ch1[]=deutscheUmlaute();
 		 char ch2[]=new char[26];
-		 char ch3[]= new char[ch1.length + ch2.length];
+		 char ch3[]= new char[30];
 		 
-		 for(int x=0 ; x < 2 ;x++) {
-			 if(x == 0) {
-			 for(char i='a' ; i < ch2.length ; i++) {
-				 ch3[i]=i;
+			 for(char i='a' ; i <= 'z'  ; i++) {
+				 ch2[y++]=i;
 			 }
-			 continue;
+			 for(int i2 = 0 ; i2 < ch2.length ; i2++) {
+				 ch3[i2]= ch2[i2];
 			 }
-			 else {
-			 for(int j = ch1.length ; j < ch3.length ; j++) {
-				 ch3[j]= ch1[y];
-				 y++;
+			 int z=0;
+			 for (int i3=ch2.length; i3< ch3.length; i3++) {
+				 ch3[i3]=ch1[z++];
 			 }
-			 }
-		 }
 		 return ch3;
 	 }
 }
