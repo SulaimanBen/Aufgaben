@@ -37,7 +37,7 @@ class Hund{
 	}
 	
 	public String toString() {
-		return "Hund heißt :"+name+"  ist "+alter+" Jhre Alt"+besitzer;
+		return "Hund heißt :"+name+"  ist "+alter+" Jhre Alt  "+besitzer;
 	}
 	
 	public boolean equals(Object Obj) {
