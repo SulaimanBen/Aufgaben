@@ -3,17 +3,18 @@ public class KleineAufgabeVarargs {
 	
 	public static void main(String[] args) {
 		
-		printArgs("sadas","dfssf");
+		printArgs("mo");
+		printArgs("mo","di");
+		printArgs("mo","di","mi");
 		
 	}
 	
-	public static void printArgs(String... s) {
-	String text ="";
-			System.out.println("kljhy");
-		for(String x : s) {
-			text += x;
-			System.out.println(text);
+	static void printArgs(String s1,String... s2) {
+		System.out.print(s1);
+		for(String x : s2) {
+			System.out.print(", "+x);
 		}
+		System.out.println();
 	}
 	
 }
