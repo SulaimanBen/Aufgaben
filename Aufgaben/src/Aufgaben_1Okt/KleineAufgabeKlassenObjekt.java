@@ -8,6 +8,8 @@ public class KleineAufgabeKlassenObjekt {
 	public static void main(String[] args) {
 		Zebra z1 = new Zebra("Rosie");
 		System.out.println(z1);
+		
+		Class<?> c1 = Zebra.class;
 	}
 
 }
