@@ -1,6 +1,7 @@
+package Aufgaben_1Okt;
 
 public class KleineAufgabeVarargs {
-	
+
 	public static void main(String[] args) {
 		
 		printArgs("mo");
@@ -18,4 +19,3 @@ public class KleineAufgabeVarargs {
 	}
 	
 }
-
