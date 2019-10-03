@@ -18,6 +18,10 @@ public class LottoSpielSimulation {
 		  
 		  tipp.abgeben();
 		  System.out.println(tipp);
+		  
+		  System.out.println("**************************************");
+		  
+		  int gewinn = lotto.vergleichen(tipp);
 		
 	}
 

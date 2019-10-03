@@ -34,4 +34,12 @@ public class LottoSpiel {
 		
 	}
 
+	public int vergleichen(LottoTipp tipp) {
+		int[] arrtipp = tipp.abgeben();
+		int[] arrspiel = ziehen();
+		
+		
+		return 0;
+	}
+
 }
