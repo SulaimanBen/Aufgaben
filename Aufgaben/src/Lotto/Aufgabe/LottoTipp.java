@@ -1,10 +1,13 @@
 package Lotto.Aufgabe;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class LottoTipp {
 
 	private int anzahlKugel , anzahlKugelGesamt;
+	static int[] arr;
+	
 
 	public LottoTipp(int anzahlKugel, int anzahlKugelGesamt) {
 		this.anzahlKugel = anzahlKugel;
@@ -14,9 +17,12 @@ public class LottoTipp {
 
 	public int[] abgeben() {
 		
-		LottoSpiel lottospiel = new LottoSpiel(anzahlKugel, anzahlKugelGesamt);
-		
-		return lottospiel.ziehen();
+		arr= new int[this.anzahlKugel];
+		Random random = new Random();
+		for(int i = 0 ; i < arr.length ; i++) {
+			arr[i]= random.nextInt((this.anzahlKugelGesamt))+1;
+		}
+		return arr;
 		
 	}
 	
@@ -24,11 +30,15 @@ public class LottoTipp {
 
 	@Override
 	public String toString() {
-		int [] arr = abgeben();
+		int [] arr = this.arr;
 		Arrays.sort(arr);
 		return "Tipp " + anzahlKugel + " aus " + anzahlKugelGesamt+". "+ Arrays.toString(arr);
 	}
 	
+	
+	public static int[] getarr() {
+		return arr;
+	}
 	
 	
 	

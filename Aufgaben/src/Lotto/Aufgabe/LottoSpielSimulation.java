@@ -22,7 +22,14 @@ public class LottoSpielSimulation {
 		  System.out.println("**************************************");
 		  
 		  int gewinn = lotto.vergleichen(tipp);
-		
+		  
+		  System.out.println(gewinn);
+		  
+		  System.out.println(lotto.gewinnInfo());
+		  System.out.println("***************************************");
+		  
+		  System.out.println(lotto.Gesamtgewinn(10));
+		 
 	}
 
 }
