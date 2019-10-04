@@ -7,7 +7,7 @@ public class LottoSpiel {
 	
 	private int anzahlKugel , anzahlKugelGesamt;
 	private int[] arr;
-	private int richtige = 0 , gewinnGeld = 1 ;;
+	int richtige = 0 , gewinnGeld=1;
 	
 
 	public LottoSpiel(int anzahlKugel, int anzahlKugelGesamt) {
@@ -37,7 +37,7 @@ public class LottoSpiel {
 	}
 
 	public int vergleichen(LottoTipp tipp) {
-		int[] arrtipp = tipp.arr;
+		int[] arrtipp = tipp.getArr();
 		
 		for( int i = 0 ; i < anzahlKugel ; i ++ ) {
 			if( arr[i] == arrtipp[i]) {
@@ -59,7 +59,7 @@ public class LottoSpiel {
 			gewinnGeld=1;
 		}
 		else {
-			while ( temprichtige != 0) {
+			while ( temprichtige > 1 ) {
 				gewinnGeld *= 10;
 				temprichtige--;
 			}
@@ -68,13 +68,7 @@ public class LottoSpiel {
 		return this.richtige + " richtige : " + gewinnGeld + " Euro" ;
 	}
 
-	public String Gesamtgewinn(int anzahl) {
-
-		for( int i = 0 ; i < anzahl ; i++) {
-			
-		}
-		
-		return "" ;
+	public int[] getArr() {
+		return arr;
 	}
-	
 }
