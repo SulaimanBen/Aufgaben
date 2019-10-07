@@ -6,7 +6,7 @@ import java.util.Random;
 public class LottoSpiel {
 	
 	private int anzahlKugel , anzahlKugelGesamt;
-	private int[] arr;
+	private int[] zahlenArr;
 	int richtige = 0 , gewinnGeld=1;
 	
 
@@ -18,7 +18,7 @@ public class LottoSpiel {
 	//Spiel 7 aus 49. [3, 7, 11, 28, 35, 40, 48]
 	@Override
 	public String toString() {
-		int[] arr= this.arr;
+		int[] arr= this.zahlenArr;
 		Arrays.sort(arr);
 		
 		return "Spiel "+this.anzahlKugel+" aus " +this.anzahlKugelGesamt+"."+Arrays.toString(arr) ;
@@ -27,12 +27,12 @@ public class LottoSpiel {
 
 
 	public int[] ziehen() {
-		arr= new int[this.anzahlKugel];
+		zahlenArr= new int[this.anzahlKugel];
 		Random random = new Random();
-		for(int i = 0 ; i < arr.length ; i++) {
-			arr[i]= random.nextInt((this.anzahlKugelGesamt))+1;
+		for(int i = 0 ; i < zahlenArr.length ; i++) {
+			zahlenArr[i]= random.nextInt((this.anzahlKugelGesamt)-1)+1;
 		}
-		return arr;
+		return zahlenArr;
 		
 	}
 
@@ -40,7 +40,7 @@ public class LottoSpiel {
 		int[] arrtipp = tipp.getArr();
 		
 		for( int i = 0 ; i < anzahlKugel ; i ++ ) {
-			if( arr[i] == arrtipp[i]) {
+			if( zahlenArr[i] == arrtipp[i]) {
 				richtige++;
 			}
 		}
@@ -65,10 +65,10 @@ public class LottoSpiel {
 			}
 		}
 		
-		return this.richtige + " richtige : " + gewinnGeld + " Euro" ;
+		return this.richtige + " richtige : " + gewinnGeld + " Euro gewonnen" ;
 	}
 
 	public int[] getArr() {
-		return arr;
+		return zahlenArr;
 	}
 }

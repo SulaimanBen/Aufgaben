@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>14</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1246</x>
+      <y>280</y>
+      <w>490</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>LottoTipp
+--
+-anzahlKugel : int
+-anzahlKugelGesamt : int
+-zahlenArr : int[]
+--
++LottoTipp(anzahlKugel :int , anzahlKugelGesamt : int)
++abgeben() : int[]
++toString() : String
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>616</x>
+      <y>294</y>
+      <w>490</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>LottoSpiel
+--
+-anzahlKugel : int
+-anzahlKugelGesamt : int
+-zahlenArr : int[]
+--
++LottoSpiel(anzahlKugel :int , anzahlKugelGesamt : int)
++ziehen() : int[]
++toString() : String
++vergleichen(tipp : LottoTipp) : int
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>0</x>
+      <y>168</y>
+      <w>518</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Soll nach dem Muster arbeiten:
+Spiel 7 aus 49. [3, 7, 11, 28, 35, 40, 48]
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>168</y>
+      <w>140</w>
+      <h>238</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>80.0;150.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1092</x>
+      <y>392</y>
+      <w>182</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1722</x>
+      <y>140</y>
+      <w>182</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;180.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1876</x>
+      <y>112</y>
+      <w>364</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>Soll nach dem Muster arbeiten:
+Tipp 7 aus 49. [3, 7, 11, 28, 35, 40, 48]
+
+bg=red</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
