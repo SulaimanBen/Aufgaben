@@ -21,7 +21,7 @@ public class vererbumgGeometrie {
 		short[] s = $_$();
 		System.out.println(Arrays.toString(s));
 	}
-	static short[]  $_$(){{{
+	static short $_$()[] {{{
 
         return new short[007];
 
