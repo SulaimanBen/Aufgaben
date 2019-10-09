@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>80</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>JavaKurs
+--
+-Nummer : int
+--
++JavaKurs(Nummer : int)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>190</x>
+      <y>360</y>
+      <w>240</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Dozent
+--
+--
++Dozent(ID : String , Name : String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>360</y>
+      <w>260</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Teilnehmer
+--
+--
++Teilnehmer(ID : String , Name : String)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>40</y>
+      <w>200</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>DozentUndTeilnehmerDetail
+--
+-Name : String
+-ID : String
+-Kurs : JavaKurs
+--
++setKurs(Kurs : JavaKurs)
+
+alle getter hier</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>170</y>
+      <w>110</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>170</y>
+      <w>130</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>580</x>
+      <y>230</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>extends
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>250</y>
+      <w>100</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>10.0;30.0;80.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>220</x>
+      <y>100</y>
+      <w>160</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;10.0</additional_attributes>
+  </element>
+</diagram>
