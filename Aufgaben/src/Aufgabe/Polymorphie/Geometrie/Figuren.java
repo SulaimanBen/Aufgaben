@@ -1,6 +1,6 @@
 package Aufgabe.Polymorphie.Geometrie;
 
-public class Figuren {
+public abstract class Figuren {
 	
 	private int x ,y ;
 	
@@ -21,8 +21,9 @@ public class Figuren {
 		this.y = y;
 	}
 
-	public double getFlaeche() {
+	/*public double getFlaeche() {
 		return -1;
-	}
+	}*/
 
+	public abstract double getFlaeche();
 }

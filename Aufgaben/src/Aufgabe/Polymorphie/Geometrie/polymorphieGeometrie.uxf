@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>350</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Rechteck
+--
+-breite : int
+-hoehe : int
+--
++getFlaeche() : double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>350</y>
+      <w>170</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Kreis
+--
+-radius : int
+--
++getFlaeche() : double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>80</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>/Figuren/
+// Abstract Class
+--
+-x : int
+-y : int
+--
++bewegen(x : int , y : int)
+/+getFlaeche() : double/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>170</y>
+      <w>180</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>160.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>170</y>
+      <w>190</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>20</x>
+      <y>110</y>
+      <w>210</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>Figuren f0 = new Kreis()
+Figuren f1 = new Rechteck()
+
+Figuren[] array = new Figuren[2]
+array[0] = new Kreis()
+array[1] = new Rechteck()
+
+double varA = f0.getFlaeche();
+double varB = f1.getFlaeche();
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
