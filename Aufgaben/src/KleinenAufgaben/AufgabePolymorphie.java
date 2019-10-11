@@ -24,18 +24,8 @@ public class AufgabePolymorphie {
 		 */
 		
 		IntOperation[] array = new IntOperation[4];
-		Random random = new Random();
-		int num;
-		for( int i = 0 ; i < array.length ; i++) {
-			if ( random.nextBoolean()) {
-				num= random.nextInt(10)+1;
-				array[i] = new AddOne();
-				num = arra
-			}
-			else {
-				
-			}
-		}
+		
+		
 		
 	}
 }
