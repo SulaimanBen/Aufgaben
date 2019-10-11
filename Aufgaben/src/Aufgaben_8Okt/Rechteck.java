@@ -1,6 +1,6 @@
 package Aufgaben_8Okt;
 
-public class Rechteck extends Koordinaten{
+public class Rechteck extends Figuren{
 	
 	private int Breite, Hoehe;
 

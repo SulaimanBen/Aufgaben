@@ -1,5 +1,7 @@
 package KleinenAufgaben;
 
+import java.util.Random;
+
 public class AufgabePolymorphie {
 	
 	public static void main(String[] args) {
@@ -18,10 +20,23 @@ public class AufgabePolymorphie {
 		System.out.println("x = "+x);//6
 		
 		/*
-		 *  A2 
-		 *  Erzeugen Sie ein Array mit mindestens 4 unterschiedlichen IntOp.
-		 *  
+		 *  A2 . 
 		 */
+		
+		IntOperation[] array = new IntOperation[4];
+		Random random = new Random();
+		int num;
+		for( int i = 0 ; i < array.length ; i++) {
+			if ( random.nextBoolean()) {
+				num= random.nextInt(10)+1;
+				array[i] = new AddOne();
+				num = arra
+			}
+			else {
+				
+			}
+		}
+		
 	}
 }
 

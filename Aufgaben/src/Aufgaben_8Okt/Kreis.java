@@ -1,6 +1,6 @@
 package Aufgaben_8Okt;
 
-public class Kreis extends Koordinaten{
+public class Kreis extends Figuren{
 	private int Radius;
 
 	public Kreis(int radius) {

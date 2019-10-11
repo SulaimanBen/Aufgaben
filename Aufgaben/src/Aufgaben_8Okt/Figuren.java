@@ -1,6 +1,6 @@
 package Aufgaben_8Okt;
 
-public class Koordinaten {
+public class Figuren {
 	
 	private int x , y ;
 	
