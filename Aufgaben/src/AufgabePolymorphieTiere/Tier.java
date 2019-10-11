@@ -1,6 +1,6 @@
 package AufgabePolymorphieTiere;
 
-public abstract class Tier {
+public abstract  class Tier {
 	
 	private String name;
 	private int alter;

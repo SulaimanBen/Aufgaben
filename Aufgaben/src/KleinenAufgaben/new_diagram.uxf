@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>130</y>
+      <w>280</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>/IntOperation/
+--
+/excute(x : int) : int/
+addThen(next : IntOperation) : IntOperation
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>370</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>AddOne</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>370</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>ChangeSign</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>200</x>
+      <y>190</y>
+      <w>190</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>310</x>
+      <y>190</y>
+      <w>110</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>10</x>
+      <y>210</y>
+      <w>230</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>IntOperation op = new AddOne()
+.andThen( new ChangeSign() )
+.andThen( new Multiply(4) )
+.andThen( new Subtract(7) );
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>370</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Multiply</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>370</y>
+      <w>100</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>Subtract</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>190</y>
+      <w>50</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;30.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>190</y>
+      <w>140</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>240</y>
+      <w>70</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=..</panel_attributes>
+    <additional_attributes>50.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>10</x>
+      <y>70</y>
+      <w>230</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>excute kombiniert :
+int y = firstOpertaion.excute(x);
+return secondOperation.excute(y);
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>120</x>
+      <y>130</y>
+      <w>30</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>600</x>
+      <y>370</y>
+      <w>100</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>AllOperation
+--
+-firstOperation : IntOperation
+-secondOperation : IntOperation
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>190</y>
+      <w>220</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;180.0</additional_attributes>
+  </element>
+</diagram>

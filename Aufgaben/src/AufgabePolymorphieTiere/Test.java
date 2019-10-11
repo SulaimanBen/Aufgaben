@@ -3,22 +3,20 @@ package AufgabePolymorphieTiere;
 public class Test {
 	public static void main(String[] args) {
 		
-		Tier hund = new Hund("Rex");
+		Hund hund = new Hund("Rex",2,true);
 		hund.laufen();
-		Tier kaze = new Katze("Tom");
-		kaze.laufen();
+		Katze katze = new Katze("Tom",1,true);
+		katze.laufen();
 		
 		print(hund);
-		print(kaze);
+		print(katze);
 	}
 	
 	static void print(Tier tier) {
-		if(tier instanceof Hund) {
-			System.out.println("Hund Name :" + tier.getName());
-		}
-		else if ( tier instanceof Katze) {
-			System.out.println("Kaze Name :"+ tier.getName());
-		}
+		String tierArt = tier.getClass().getSimpleName();
+		String tierName = tier.getName();
+		
+		System.out.println(tierArt+". Name :" + tierName);
 	}
 
 }
