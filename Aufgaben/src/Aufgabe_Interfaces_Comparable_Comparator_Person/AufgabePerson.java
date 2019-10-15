@@ -6,6 +6,7 @@ import java.util.Comparator;
 public class AufgabePerson {
 	public static void main(String[] args) {
 		
+		// Vier Personen im Array speichern
 		Person[] persons = {
 				new Person( "Paul" , "Smith" , 1980),
 				new Person( "Paul" , "Black" , 1975),
@@ -13,11 +14,13 @@ public class AufgabePerson {
 				new Person( "John" , "Black" , 2000)
 		};
 		
-		
+		// Array ausgeben
 		System.out.println(Arrays.toString(persons));
 		
+		// Array sortieren und dann ausgeben
 		Arrays.sort(persons);
 		System.out.println(Arrays.toString(persons));
+		
 		
 		int erg = Arrays.binarySearch(persons,new Person( "John" , "Black" , 2000));
 		System.out.println("John Black ist in index : "+erg);
