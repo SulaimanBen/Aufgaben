@@ -1,4 +1,4 @@
-package Aufgabe_Interfaces_Comparable_Comparator_Person;
+package aufgabe_interfaces_comparable_comparator_person;
 
 import java.util.Arrays;
 import java.util.Comparator;
