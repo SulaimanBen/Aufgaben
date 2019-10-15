@@ -1,9 +1,12 @@
 package aufgabenInterfaces2;
 
-import aufgaben.Kreis;
-import aufgaben.Size;
+interface Vergleichbar{
 
-class Size {
+	int vergleicheMit(Vergleichbar b);
+	
+}
+
+class Size implements Vergleichbar{
 	int size;
 	
 	public Size(int size) {
@@ -14,9 +17,15 @@ class Size {
 	public String toString() {
 		return "Size = " + size;
 	}
+
+	@Override
+	public int vergleicheMit(Vergleichbar b) {
+		Size s2 = (Size)b;
+		return this.size - s2.size;
+	}
 } // End of Size
 
-class Kreis {
+class Kreis implements Vergleichbar {
 	int radius;
 	
 	public Kreis(int radius) {
@@ -26,6 +35,11 @@ class Kreis {
 	@Override
 	public String toString() {
 		return "Kreis. Radius = " + radius;
+	}
+
+	@Override
+	public int vergleicheMit(Vergleichbar b) { 
+		return radius - ((Kreis)b).radius;
 	}
 }
 
@@ -48,8 +62,13 @@ public class KleineAufgabeInterfaces {
 		Kreis kB = new Kreis(77);
 		System.out.println(getMax(kA , kB)); // Kreis = 12
 		
+		getMax(sB , sA);
+		
 	} // End of main
 
+	/*
+	 *  1 Lösung ohne Polymorphie .. (nicht so gut)
+	 */
 	 static Object getMax(Object objA, Object objB) {
 		 if(objA instanceof Size ) {
 			 int max = Math.max(((Size) objA).size, ((Size) objB).size);
@@ -60,5 +79,17 @@ public class KleineAufgabeInterfaces {
 		 }
 		 
 	}
+	 
+	 /*
+	  *  2 Lösung mit Interface und Polymorphie
+	  */
+	 
+	 static Vergleichbar getMax(Vergleichbar a, Vergleichbar b) {
+		 if( a.vergleicheMit(b) > 0 ) {
+			 return a;
+		 } else {
+			 return b;
+		 }
+	 }
 
 }
