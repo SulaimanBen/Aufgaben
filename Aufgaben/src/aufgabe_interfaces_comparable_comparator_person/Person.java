@@ -1,8 +1,6 @@
 package aufgabe_interfaces_comparable_comparator_person;
 
-import java.util.Comparator;
-
-public class Person implements Comparable<Person> , Comparator<Person>{
+public class Person implements Comparable<Person> {
 
 	private String vorname , nachname;
 	private int geburtsjahr;
@@ -30,16 +28,12 @@ public class Person implements Comparable<Person> , Comparator<Person>{
 		if( erg == 0) {
 			erg = vorname.compareTo(p2.vorname);
 		}
-		else if (erg == 0 ) {
+		if (erg == 0 ) {
 			erg = geburtsjahr - p2.geburtsjahr;
 		}
 		return erg;
 	}
 
-	@Override
-	public int compare(Person p1, Person p2) {
-		return p2.compareTo(p1);
-	}
 	
 	
 }

@@ -36,6 +36,9 @@ public class KleineAufgabeComparable {
 		for( Kreis k : arrK) {
 			System.out.println(x++ +". "+k);
 		}
+		
+		
+		
 	}
 	
 
