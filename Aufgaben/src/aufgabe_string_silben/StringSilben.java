@@ -4,28 +4,33 @@ import java.util.Random;
 
 public class StringSilben {
 	
+	public static final String[] SILBEN=
+		{"pro","get","idre","su","ola","im","se","fo","ral","els","fal","man","th","mu"};
+	
 	public static void main(String[] args) {
 		
-		String[] silben= {"pro","get","set","gam","col","jit","hell","gin","ral","els","fal","man"};
-		String name = generiere(silben, 4);
+		String name = generierename(SILBEN, 4);
 		System.out.println(name);
-		namenGenrieren(50,silben,4);
+		System.out.println("**************************************");
+		namenGenrieren( 50 , SILBEN , 3 );
 		
-	}
+		
+	} // End of main
 	
-	static String generiere(String[] arrayMitSilben, int x) {
+	static String generierename(String[] silben, int anzahlSilben) {
 		String name = "";
 		Random random = new Random();
-		for (int i = 0; i < x; i++) {
-			name += arrayMitSilben[random.nextInt(arrayMitSilben.length-1)+1];
+		for (int i = 0; i < anzahlSilben; i++) {
+			name =name.concat(silben[random.nextInt(silben.length)]);
 		}
 		
-		return name;
+		String firstLetter = name.charAt(0) + "";
+		return firstLetter.toUpperCase()+name.substring(1);
 	}
 	
-	static void namenGenrieren(int anzahl, String[] arrayMitSilben, int x) {
+	static void namenGenrieren(int anzahl, String[] silben, int anzahlSilben) {
 		for( int i = 1 ; i <= anzahl ; i++ ) {
-			System.out.println(i+". "+generiere(arrayMitSilben, x));
+			System.out.println(i+". "+generierename(silben, anzahlSilben));
 		}
 	}
 }
