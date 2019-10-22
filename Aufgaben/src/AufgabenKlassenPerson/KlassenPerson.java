@@ -20,15 +20,20 @@ public class KlassenPerson {
 		Person p3=new Person("Ben","sulaiman",1992,80689);
 		System.out.println(p2.equals(p3));
 		
-		// Statische Methode ´getMustermann´ testen
+		// Statische Methode ï¿½getMustermannï¿½ testen
 		
 		System.out.println(getMustermann());
 		
 	}
+
+	private static char[] getMustermann() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	/*
 	 *  Erzeugen Sie bitte eine statische Methode getMustermann die eine neue Person 'Max Mustermann,
-	 *  Geburtsjahr: 1960, Plz: 12345' bildet und zurück liefert. 
+	 *  Geburtsjahr: 1960, Plz: 12345' bildet und zurï¿½ck liefert. 
 	 *  Testen Sie die Methode.
 	 */
 	

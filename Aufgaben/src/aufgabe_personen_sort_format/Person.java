@@ -14,24 +14,13 @@ public class Person implements Comparable<Person> {
 		return vorname;
 	}
 
-	public void setVorname(String vorname) {
-		this.vorname = vorname;
-	}
-
 	public String getNachname() {
 		return nachname;
 	}
 
-	public void setNachname(String nachname) {
-		this.nachname = nachname;
-	}
 
 	public int getGeburtsjahr() {
 		return geburtsjahr;
-	}
-
-	public void setGeburtsjahr(int geburtsjahr) {
-		this.geburtsjahr = geburtsjahr;
 	}
 
 	@Override

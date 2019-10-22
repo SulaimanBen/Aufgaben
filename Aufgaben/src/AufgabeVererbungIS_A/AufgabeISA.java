@@ -23,10 +23,10 @@ class Tankstelle implements Tankbar{
 }
 
 interface Lebewesen{}
-interface Lauffähig{
+interface Lauffaehig{
 	void laufen();
 }
-class Mensch extends Nase implements Lebewesen , Lauffähig{
+class Mensch extends Nase implements Lebewesen , Lauffaehig{
 
 	@Override
 	public void laufen() {

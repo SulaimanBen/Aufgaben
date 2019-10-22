@@ -14,7 +14,6 @@ public class Arrays2D {
 		 ob.printArray(arr);
 		 System.out.println("**********************************");
 		 
-		for()
 		
 		
 	}
