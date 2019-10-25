@@ -34,8 +34,8 @@ public class ArrayList_Aufgabe {
 		
 		Integer[] arr = { 1 , 4 , 6 };
 		
-		ArrayList<Integer> list =  new ArrayList<Integer>();
-		System.out.println("ArrayList : "+list);
+		List<Integer> list = Arrays.asList(arr);
+		System.out.println("List : "+list);
 		
 		Collection<Integer> c = list;
 		System.out.println("Collection : "+c);
