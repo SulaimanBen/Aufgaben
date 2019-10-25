@@ -2,6 +2,8 @@ package aufgabearraylist;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -27,15 +29,19 @@ public class ArrayList_Aufgabe {
 		a2();
 		a3();
 		a4();
-		a5();
 		
-	}
-
-	private static void a5() {
 		System.out.println("********** A5 **********");
 		
+		Integer[] arr = { 1 , 4 , 6 };
 		
+		ArrayList<Integer> list =  new ArrayList<Integer>();
+		System.out.println("ArrayList : "+list);
 		
+		Collection<Integer> c = list;
+		System.out.println("Collection : "+c);
+		
+		Iterable<Integer> it = list;
+		System.out.println("Iterable : "+it);
 	}
 
 	private static void a4() {
