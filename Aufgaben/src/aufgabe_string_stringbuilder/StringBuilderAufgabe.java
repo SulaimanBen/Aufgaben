@@ -6,7 +6,7 @@ public class StringBuilderAufgabe {
 		
 		  /*
 		   * In einer Schleife konkatienieren Sie wiederholt die Variablen zu einem Gesamtstring.
-		   * Die Anzahl der Schleifenwiederholungen wählen Sie selbst aus.
+		   * Die Anzahl der Schleifenwiederholungen wï¿½hlen Sie selbst aus.
 		   * Messen Sie die Zeit vor und nach der Schleife und ermitteln Sie am Ende die Zeitdifferenz.
 		   */
 		long startTime1 = System.nanoTime();
