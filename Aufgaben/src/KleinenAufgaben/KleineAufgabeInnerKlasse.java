@@ -64,7 +64,7 @@ public class KleineAufgabeInnerKlasse {
 		Collections.sort(list , cmp1);
 		print(list);
 		
-		AffenFormat format =  ;
+		AffenFormat format ;
 		
 	}
 	

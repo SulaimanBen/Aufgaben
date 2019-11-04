@@ -17,7 +17,7 @@ class Kreis implements Comparable<Kreis1> {
 
 	@Override
 	public int compareTo(Kreis1 o) {
-		return radius - o.radius;
+		return radius - o.getRadius();
 	}
 	
 }
