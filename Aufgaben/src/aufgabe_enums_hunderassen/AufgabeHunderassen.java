@@ -1,26 +1,30 @@
 package aufgabe_enums_hunderassen;
 
-enum Hunderasse{
-	DACKEL(0.5),
-	COLLIE(1.0),
+enum Hunderasse {
+	DACKEL(.5),
+	COLLIE(1),
 	DOGGE(1.5);
+
+	private final double maxGroesse;
 	
-	final double maxGroesse;
-	
-	private Hunderasse(double maxGroesse) {
+	Hunderasse(double maxGroesse) {
 		this.maxGroesse = maxGroesse;
 	}
+	
 	@Override
 	public String toString() {
-		return this.name() + ", max. Groesse: " + maxGroesse;
+		String name = name().charAt(0)+ name().substring(1).toLowerCase();
+		return name + ", max. Groesse: " + maxGroesse;
 	}
 }
 
 public class AufgabeHunderassen {
 	
 	public static void main(String[] args) {
+		
 		for (Hunderasse value : Hunderasse.values()) {
 			System.out.println(value);
+			
 		}
 	}
 }
