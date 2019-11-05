@@ -20,7 +20,7 @@ public class KleineAufgabeExceptions {
 
 	private static String formatName(String name) {
 		if(name.length() < 3) {
-			throw new IllegalArgumentException("Der Name muss mindestens 3 Zeichen habem");
+			throw new IllegalArgumentException("Der Name muss mindestens 3 Zeichen haben");
 		}
 		return name.toUpperCase();
 	}
