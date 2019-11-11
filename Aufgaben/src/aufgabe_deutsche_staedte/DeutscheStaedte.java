@@ -1,8 +1,9 @@
 package aufgabe_deutsche_staedte;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.io.IOException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +18,7 @@ import org.jsoup.select.Elements;
 
 public class DeutscheStaedte {
 
+	static String url = "https://de.wikipedia.org/wiki/Liste_der_Gro%C3%9Fst%C3%A4dte_in_Deutschland";
 	public static void main(String[] args) {
 	
 		 // Frame window
@@ -37,44 +39,61 @@ public class DeutscheStaedte {
         frame.add(panel);
         frame.setSize(200, 200);
         frame.setVisible(true);  
+        
+        b1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					a12(url);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+        
+        b2.addActionListener( new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					a34(url);
+				} catch (IOException e1) {
+					e1.printStackTrace();
+				}
+			}
+		});
 		
-//		try {
-//			a34();
-//		} catch (IOException e) {
-//			System.out.println("Fehler ! ");
-//		}
-//	
+        
 		
 	}
-	public static void a34() throws IOException  {
+	private static void a34(String urlAsString) throws IOException  {
 		
-		
-		String url = "https://de.wikipedia.org/wiki/Liste_der_Gro%C3%9Fst%C3%A4dte_in_Deutschland";
-		
-		Document doc = Jsoup.connect(url).get();
-        Elements trow = doc.select("table td:eq(16)");
+		Document doc = Jsoup.connect(urlAsString).get();
+		Element table = doc.select("table").get(0);
+        Elements row = table.select("td:eq(16)");
         
         List<Bundesland> bundislandList = new ArrayList<>();
-        for (Element e : trow){
+        for (Element e : row){
         	String subText = e.text().substring(0, e.text().indexOf(" "));
             bundislandList.add(new Bundesland(subText));
         }
         
 
-        trow = doc.select("table td:eq(1)");
+        row = table.select("td:eq(1)");
         List<Stadt> stadtList = new ArrayList<>();
-        for (Element e : trow){
+        for (Element e : row){
             stadtList.add(new Stadt(e.text()));
         }
 
         
         List<String> einwohnerZahl2018 = new ArrayList<>();
-        trow = doc.select("table td:eq(11)");
-        for (Element e : trow) {
+        row = table.select("td:eq(11)");
+        for (Element e : row) {
 			einwohnerZahl2018.add(e.text());
 	   }
         
-        String fmt = "|%-20s   | %-20s   | %-15s   |\n";
+        String fmt = "|%-25s   | %-20s   | %-15s   |\n";
         
         System.out.printf(fmt,"Stadt Name","BundesLand","Einwohnerzahl");
         System.out.println("-----------------------------------------------------------------------------");
@@ -85,6 +104,27 @@ public class DeutscheStaedte {
 		}
         
   }
+	
+	private static void a12(String urlAsString) throws IOException {
+		
+		java.net.URL url2 = new java.net.URL( url);   
+		InputStream is = url2.openStream();   
+		Reader r = new InputStreamReader(is);   
+		try(BufferedReader in = new BufferedReader( r )) {
+			
+			StringBuilder sb = new StringBuilder();
+			String line;
+			while( (line = in.readLine()) != null ) {
+				sb.append(line).append("\n");
+			}
+			System.out.println(sb.toString());
+			
+		} catch (IOException e) {
+			throw new UncheckedIOException("Kann die Quelle nicht lesen", e);
+		}
+		
+		
+	}
 	
 }
 
