@@ -20,13 +20,13 @@ public class DateTimeCalendar {
 		System.out.println(dateFormat);
 		
 		System.out.println("-------------------------");
+		System.out.println(date.lengthOfMonth());
 		fmt = DateTimeFormatter.ofPattern("EEEE");
 		
 		String textFormat = "| %02d |  %-10s  |\n";
-		for (int tag = 1; tag <= date.lengthOfMonth() ; tag++) {
+		for (int tag = date.getDayOfMonth(); tag < date.lengthOfMonth() ; tag++ ) {
 			System.out.printf(textFormat,tag ,date.format(fmt));
 			date = date.plusDays(1);
 		}
-		
 	}
 }
