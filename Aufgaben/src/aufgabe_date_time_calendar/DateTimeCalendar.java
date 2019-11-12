@@ -24,9 +24,16 @@ public class DateTimeCalendar {
 		fmt = DateTimeFormatter.ofPattern("EEEE");
 		
 		String textFormat = "| %02d |  %-10s  |\n";
-		for (int tag = date.getDayOfMonth(); tag < date.lengthOfMonth() ; tag++ ) {
-			System.out.printf(textFormat,tag ,date.format(fmt));
+//		for (int tag = date.getDayOfMonth() ; tag <= date.lengthOfMonth() ; tag++) {
+//			System.out.printf(textFormat, tag ,date.format(fmt));
+//			date = date.plusDays(1);
+//		}
+		int tag = date.getDayOfMonth();
+		while (date.getMonthValue() == 4) {
+			System.out.printf(textFormat, tag ,date.format(fmt));
 			date = date.plusDays(1);
+			tag = date.getDayOfMonth();
 		}
+		System.out.println(date);
 	}
 }
