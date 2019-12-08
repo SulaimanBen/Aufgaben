@@ -89,7 +89,8 @@ Wird folgender Code kompilieren, wenn die Klasse `Hund` von der Klasse `Tier` er
 QUESTION 6
 
 
-Wird folgender Code kompilieren, wenn die Klasse `Hund` und die Klasse `Katze` die Klasse `Tier` erweitern (`Hund` und `Katze` sind Geschwisterklassen)?
+Wird folgender Code kompilieren, wenn die Klasse `Hund` und die Klasse
+`Katze` die Klasse `Tier` erweitern (`Hund` und `Katze` sind Geschwisterklassen)?
 
 		  Hund h = new Hund();
 		  System.out.println( h instanceof Katze );
@@ -247,7 +248,7 @@ Was ist richtig?
        
 ( ) D. Exception in der Zeile A 
        
-(X) E. Exception in der Zeile B 
+(X) E. Exception in der Zeile B // ArrayStrorException
        
        
 
@@ -780,7 +781,7 @@ Was ist das Ergebnis?
 
 ( ) A. Dozent Person.
        
-( ) B. Dozent Dozent.
+(X) B. Dozent Dozent.
        
 ( ) C. Person Person.
        
@@ -820,9 +821,9 @@ Was ist richtig?
 
 [ ] A. 800 800 800.
        
-[ ] B. Compilerfehler in der Zeile A.
+[A] B. Compilerfehler in der Zeile A.
        
-[ ] C. Compilerfehler in der Zeile B.
+[X] C. Compilerfehler in der Zeile B.
        
 [ ] D. Compilerfehler in der Zeile C.
        
@@ -864,7 +865,7 @@ Was ist richtig?
        
 ( ) C. Compilerfehler in der Zeile C.
        
-( ) D. Compilerfehler in der Zeile D.
+(X) D. Compilerfehler in der Zeile D.
        
 ( ) E. Der Code kompiliert, zur Laufzeit gibt es die ClassCastException.
        
@@ -904,7 +905,7 @@ Was ist das Ergebnis?
 
 ( ) A. 1 1 1 1.
        
-( ) B. 1 1 2 2.
+(X) B. 1 1 2 2.
        
 ( ) C. 1 1 1 2.
        
@@ -950,7 +951,7 @@ Was ist das Ergebnis?
        
 ( ) B. 1 1 2 2.
        
-( ) C. 1 2 2 2.
+(X) C. 1 2 2 2.
        
 ( ) D. Compilerfehler.
        
@@ -981,11 +982,11 @@ Was ist richtig?
 
 
 
-[ ] A. Klasse `DerivedA` kompiliert nicht.
+[X] A. Klasse `DerivedA` kompiliert nicht.
        
-[ ] B. Klasse `DerivedB` kompiliert nicht.
+[X] B. Klasse `DerivedB` kompiliert nicht.
        
-[ ] C. Klasse `DerivedC` kompiliert nicht.
+[X] C. Klasse `DerivedC` kompiliert nicht.
        
 [ ] D. Alle Klassen kompilieren.
        
@@ -1030,7 +1031,7 @@ Was ist das Ergebnis?
 
 ( ) A. Formatter.
        
-( ) B. HtmlFormatter.
+(X) B. HtmlFormatter.
        
 ( ) C. MarkdownFormatter.
        
@@ -1068,7 +1069,7 @@ Was ist das Ergebnis?
 
 
 
-( ) A. 1 1.
+(X) A. 1 1.
        
 ( ) B. 1 2.
        
@@ -1109,7 +1110,7 @@ Was ist das Ergebnis?
 
 ( ) A. 1 1.
        
-( ) B. 1 2.
+(X) B. 1 2.
        
 ( ) C. 2 2.
        
@@ -1152,7 +1153,7 @@ Was ist das Ergebnis?
        
 ( ) C. Compilerfehler in der Zeile C.
        
-( ) D. Compilerfehler in der Zeile D.
+(D) D. Compilerfehler in der Zeile D.
        
        
        
@@ -1186,7 +1187,7 @@ Was ist das Ergebnis?
        
 [ ] D. Compilerfehler in der Zeile D.
        
-[ ] E. Keine Compilerfehler.
+[X] E. Keine Compilerfehler.
        
        
        
@@ -1217,12 +1218,12 @@ Gegeben:
 		public static void main(String[] args) {
 			IntValue v1 = new IntValue(3);
 			IntValue v2 = new IntValue(3);
-			System.out.print((v1 == v2) + " ");
-			System.out.print(v1.equals(v2)+ " ");
-			DoubleValue v3 = new DoubleValue(3.);
+			System.out.print((v1 == v2) + " "); // false
+			System.out.print(v1.equals(v2)+ " "); // false
+			DoubleValue v3 = new DoubleValue(3.); 
 			DoubleValue v4 = new DoubleValue(3.);
-			System.out.print((v3 == v4) + " ");
-			System.out.print(v3.equals(v4));
+			System.out.print((v3 == v4) + " "); // false 
+			System.out.print(v3.equals(v4)); // true
 		}
 	}
 
@@ -1230,7 +1231,7 @@ Was ist das Ergebnis?
 
 
 
-( ) A. false false false true
+(X) A. false false false true
        
 ( ) B. false false false false
        
@@ -1295,7 +1296,7 @@ Was ist richtig?
        
 ( ) G. Compilerfehler in der Zeile G.
        
-( ) H. Keine Compilerfehler.
+(X) H. Keine Compilerfehler.
        
        
        

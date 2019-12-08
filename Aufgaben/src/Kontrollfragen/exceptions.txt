@@ -5,18 +5,18 @@ QUESTION 1
 Gegeben:
    
 	static void m1() {
-		System.out.print("a ");
+		System.out.print("a "); // 3
 		if(true) 
 			throw new ArithmeticException("test");
 		System.out.print("b ");
 	}
 	static void m2() {
-		System.out.print("c ");
+		System.out.print("c "); // 2
 		m1();
 		System.out.print("d ");
 	}
 	public static void main(String[] args) {
-		System.out.print("m1 ");
+		System.out.print("m1 "); // 1
 		m2();
 		System.out.print("m2 ");
 	}
@@ -27,7 +27,7 @@ Was ist das Ergebnis?
 
 ( ) A. m1 c a.
        
-( ) B. m1 c a gefolgt von der ArithmeticException.
+(X) B. m1 c a gefolgt von der ArithmeticException.
        
 ( ) C. m1 c a test b d m2
        
@@ -46,30 +46,30 @@ QUESTION 2
 Gegeben:
    
 	static void m1() {
-		System.out.print("a ");
+		System.out.print("a "); // 3
 		System.out.print(5/0);
 		System.out.print("b ");
 	}
 	
 	static void m2() {
-		System.out.print("c ");
+		System.out.print("c "); // 2
 		m1();
 		System.out.print("d ");
 	}
 
 	public static void main(String[] args) {
 
-		System.out.print("m1 ");
+		System.out.print("m1 "); // 1
 		
 		try {
 			m2();
 			System.out.print("m2 ");
 			
 		} catch (Exception e) {
-			System.out.print("m3 ");
+			System.out.print("m3 "); // 4
 		} 
 		
-		System.out.print("m4 ");
+		System.out.print("m4 "); // 5
 	}
 
 Was ist das Ergebnis?
@@ -78,7 +78,7 @@ Was ist das Ergebnis?
 
 ( ) A. m1 c a m2 m4.
        
-( ) B. m1 c a m3 m4.
+(X) B. m1 c a m3 m4.
        
 ( ) C. m1 c a gefolgt von einer Exception.
        
@@ -111,7 +111,7 @@ Was ist das Ergebnis wenn in der Zeile A eine `ArithmeticException` geworfen wir
        
 ( ) C. e ae
        
-( ) D. Compilerfehler
+(X) D. Compilerfehler
        
        
 
@@ -134,7 +134,7 @@ Was ist das Ergebnis wenn in der Zeile A eine `ArithmeticException` geworfen wir
 
 
 
-( ) A. ae
+(X) A. ae
        
 ( ) B. e
        
@@ -152,7 +152,7 @@ QUESTION 5
 Gegeben:
 
 	class StringException implements Predicate<IllegalArgumentException> {
-		public void test(IllegalArgumentException e) {
+		public void test(IllegalArgumentException e) { // boolean test
 			return true;
 		}
 	} 
@@ -167,7 +167,7 @@ Was ist das Ergebnis?
 
 
 
-( ) A. Compilerfehler.
+(X) A. Compilerfehler.
        
 ( ) B. Es wird die StringException geworfen.
        
