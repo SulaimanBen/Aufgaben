@@ -158,7 +158,7 @@ Gegeben:
 	} 
 
 	public class Main {
-		public static void main(String[] args) throws StringException {
+		public static void main(String[] args) throws StringException { // Not subclass of Throwable
 			throw new StringException();
 		}
 	}
@@ -208,7 +208,7 @@ Was ist das Ergebnis?
 
 ( ) A. Compilerfehler.
        
-( ) B. Beim Aufruf der main-Methode wird NullPointerException geworfen.
+(X) B. Beim Aufruf der main-Methode wird NullPointerException geworfen.
        
 ( ) C. Beim Aufruf der main-Methode wird die Anwendung ohne Exceptions ausgeführt.
        
@@ -234,7 +234,7 @@ Gegeben:
 		
 		static void m4() throws NullPointerException, IOException {  
 		}
-		public static void main(String[] args) {
+		public static void main(String[] args) { // throws IOException (checked Exception)
 			m1();
 			m2();
 			m3();
@@ -246,7 +246,7 @@ Was ist das Ergebnis?
 
 
 
-( ) A. Compilerfehler.
+(X) A. Compilerfehler.
        
 ( ) B. Beim Aufruf der main-Methode wird NullPointerException geworfen.
        
@@ -270,7 +270,7 @@ Welche Exception wird geworfen?
 
 ( ) A. Keine
        
-( ) B. NullPointerException
+(X) B. NullPointerException
        
 ( ) C. ArithmeticException
        
@@ -291,7 +291,7 @@ Welche Exception wird geworfen?
 
 
 
-( ) A. Keine
+(X) A. Keine
        
 ( ) B. NullPointerException
        
@@ -316,7 +316,7 @@ Welche Exception wird geworfen?
        
 ( ) B. NullPointerException
        
-( ) C. ArithmeticException
+(X) C. ArithmeticException
        
        
 
@@ -327,13 +327,13 @@ QUESTION 11
 
 Gegeben:
 
-	System.out.println( 5. / 0 );
+	System.out.println( 5. / 0 ); // Infinity
 
 Welche Exception wird geworfen?
 
 
 
-( ) A. Keine
+(X) A. Keine
        
 ( ) B. NullPointerException
        
@@ -360,7 +360,7 @@ Welche Exception wird geworfen?
        
 ( ) B. NullPointerException
        
-( ) C. ArrayIndexOutOfBoundsException
+(X) C. ArrayIndexOutOfBoundsException
        
        
 
@@ -378,7 +378,7 @@ Welche Exception wird geworfen?
 
 
 
-( ) A. Keine
+(X) A. Keine
        
 ( ) B. NullPointerException
        
@@ -405,7 +405,7 @@ Welche Exception wird geworfen?
        
 ( ) B. NullPointerException
        
-( ) C. ClassCastException
+(X) C. ClassCastException
        
        
        
@@ -442,7 +442,7 @@ Was ist richtig?
 
 ( ) A. Compilerfehler in der Klasse `Auto`.
        
-( ) B. Compilerfehler in der Klasse `VW`.
+(X) B. Compilerfehler in der Klasse `VW`.
        
 ( ) C. Compilerfehler in der Klasse `Opel`.
        
@@ -480,9 +480,9 @@ Was könnte das Ergebnis sein, wenn die Methode `test` aufgerufen wird?
 
 [ ] A. a b c
        
-[ ] B. b c
+[C] B. b c
        
-[ ] C. a c
+[X] C. a c
        
 [ ] D. c gefolgt von einem Error
        

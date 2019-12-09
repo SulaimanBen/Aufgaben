@@ -6,15 +6,15 @@ Welche Aussage beschreibt die Kapselung (encapsulation)?
 
 
 
-( ) A. Trennen zwischen der Funktionsbeschreibung und der Funktionsrealisierung. 
+( ) A. Trennen zwischen der Funktionsbeschreibung und der Funktionsrealisierung. // abstract , interface 
        
-( ) B. Wiederverwenden der Definitionen aus der Basisklasse.
+( ) B. Wiederverwenden der Definitionen aus der Basisklasse. // inheritance
        
 (X) C. Verweden der Sichtbarkeiten (access modifiers) zum Verstecken der Attribute in einer Klasse.
        
 ( ) D. Bilden neuer Objekte.
        
-( ) E. Auswahl der aufzurufenden Instanzmethode zur Laufzeit.
+( ) E. Auswahl der aufzurufenden Instanzmethode zur Laufzeit. // polymorphism
        
        
        
@@ -66,7 +66,7 @@ dass die Methode `getFlaeche` immer den richtigen Wert liefert (abhängig von de
 [ ] F. Die Methode `getFlaeche` sollte `static` werden.
        
        
-       
+ > * SOLID-Programming       
 
 
 -----------
@@ -81,7 +81,7 @@ Was ist richtig?
        
 [ ] B. Klassen aus dem Package 'java.util' müssen nicht importiert werden.
        
-[ ] C. Nur 'sichtbare' Elemente können importiert werden.
+[X] C. Nur 'sichtbare' Elemente können importiert werden.
        
 [X] D. Mit der import-Anweisung können Topleveltypen aus einem Package importiert werden.
        
@@ -224,7 +224,7 @@ Was muss gemacht werden, damit alle Compilerfehler verschwinden?
        
 [ ] C. Den vollqualifizierten Namen `java.list.ArrayList` für das Attribut in der Zeile 05 verwenden.
        
-[X] D. Die Klasse `MyNumbers` in `Values` umbenennen.
+[X] D. Die Klasse `MyNumbers` in `Values` umbenennen. // Values.java
        
 [ ] E. Den expliziten Konstruktor definieren, in dem das Attribut `values` initialisiert wird.
        
@@ -245,11 +245,11 @@ Auto.java
 	public class Auto {
 		public int v1 = 1;
 		protected int v2 = 2;
-		int v3 = 3;
+		int v3 = 3; // packeg private (default)
 		private int v4 = 4;
 	}
 	
-Main.java
+Rennwagen.java
 
 	package rennen;
 	import autos.Auto;

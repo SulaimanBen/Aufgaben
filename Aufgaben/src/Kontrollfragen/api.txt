@@ -550,7 +550,7 @@ Was ist das Ergebis?
        
 (X) B. 4 v
        
-( ) C. Compielrfehler
+( ) C. Compilerfehler
        
        
        
@@ -649,7 +649,7 @@ Was ist das Ergebis?
 
 
 
-( ) A. abc abc
+(X) A. abc abc
        
 ( ) B. abc abcbc
        
@@ -678,7 +678,7 @@ Was ist das Ergebis?
 
 
 
-( ) A. 2 3 3 2 -1
+(X) A. 2 3 3 2 -1
        
 ( ) B. Compilerfehler
        
@@ -701,7 +701,7 @@ Was ist das Ergebis?
 
 
 
-( ) A. TAGFREI
+(X) A. TAGFREI
        
 ( ) B. TAGFREIT
        
@@ -731,7 +731,7 @@ Was ist das Ergebis?
        
 ( ) B. JAvAJAvA
        
-( ) C. JAvAJava
+(X) C. JAvAJava
        
 ( ) D. Compilerfehler
        
@@ -757,7 +757,7 @@ Was könnte das Ergebis sein?
        
 ( ) B. [C@12ab13cd +8
        
-( ) C. Java 8
+(X) C. Java 8
        
 ( ) D. Java +8
        
@@ -791,7 +791,7 @@ Wie viele String-Objekte werden bei jedem Aufruf der Methode `method` erzeugt?
        
 ( ) C. 2.
        
-( ) D. 3.
+(X) D. 3.
        
 ( ) E. 4.
        
@@ -805,7 +805,7 @@ In welcher Java-Version erschien StringBuilder?
 
 
 
-( ) A. 5
+(X) A. 5
        
 ( ) B. 6
        
@@ -834,7 +834,7 @@ Was ist das Ergebnis?
        
 ( ) B. java20.
        
-( ) C. Compilerfehler
+(X) C. Compilerfehler
        
        
        
@@ -859,7 +859,7 @@ Was ist das Ergebnis?
 
 
 
-( ) A. 3.22 a true.
+(X) A. 3.22 a true.
        
 ( ) B. Compilerfehler
        
@@ -883,7 +883,7 @@ Was ist das Ergebnis?
 
 
 
-( ) A. FREI.
+(X) A. FREI.
        
 ( ) B. FRE.
        
@@ -909,7 +909,7 @@ Was ist das Ergebnis?
 
 
 
-( ) A. JAVA.
+(X) A. JAVA.
        
 ( ) B. Compilerfehler.
        
@@ -936,7 +936,7 @@ Was ist das Ergebnis?
 
 ( ) A. Montag 6.
        
-( ) B. Freitag 7.
+(X) B. Freitag 7.
        
 ( ) C. Freiag 6.
        
@@ -963,7 +963,7 @@ Was ist das Ergebnis?
 
 ( ) A. AVAJ.
        
-( ) B. JAVA.
+(X) B. JAVA.
        
 ( ) C. Compilerfehler.
        
@@ -987,7 +987,7 @@ Was ist das Ergebnis?
 
 
 
-( ) A. 2 2 -1 2.
+(X) A. 2 2 -1 2.
        
 ( ) B. 2 2 -1 -1.
        
@@ -1013,7 +1013,7 @@ Was ist das Ergebnis?
 
 
 
-( ) A. Freitag
+(X) A. Freitag
        
 ( ) B. Fretag
        
@@ -1044,7 +1044,7 @@ Was ist das Ergebnis?
 
 ( ) A. Frei!
        
-( ) B. Compilerfehler.
+(X) B. Compilerfehler.
        
 ( ) C. Exception.
        
@@ -1060,7 +1060,7 @@ Was ist richtig?
 
 
 
-( ) A. `StringBuilder` und `StringBuffer` lösen ähnliche Aufgaben.
+(X) A. `StringBuilder` und `StringBuffer` lösen ähnliche Aufgaben.
        
 ( ) B. `StringBuilder` hat die IS-A-Beziehung mit `StringBuffer`.
        
@@ -1077,21 +1077,21 @@ Gegeben:
 	Byte v1 = 1;
 	Short v2 = 2;
 	Integer v3 = 3;
-	Long v4 = 4;
-	Float v5 = 5;
-	Double v6 = 6;
+	Long v4 = 4; // int -> Long
+	Float v5 = 5; // int -> Float
+	Double v6 = 6; // int -> Double
 	Character v7 = 7;
-	Boolean v8 = 8;
+	Boolean v8 = 8; // int -> Boolean
 
 Welche Variablen werden korrekt (kompilierbar) definiert?
 
 
 
-[ ] A. v1
+[X] A. v1
        
-[ ] B. v2
+[X] B. v2
        
-[ ] C. v3
+[X] C. v3
        
 [ ] D. v4
        
@@ -1099,7 +1099,7 @@ Welche Variablen werden korrekt (kompilierbar) definiert?
        
 [ ] F. v6
        
-[ ] G. v7
+[X] G. v7
        
 [ ] H. v8
        
@@ -1120,7 +1120,7 @@ Was ist richtig?
 
 
 
-( ) A. Compilerfehler in der Zeile A
+(X) A. Compilerfehler in der Zeile A
        
 ( ) B. Compilerfehler in der Zeile B
        
@@ -1143,7 +1143,7 @@ Welche Zeilen kompilieren nicht?
 	
 
 
-( ) A. A
+(X) A. A
        
 ( ) B. B
        
@@ -1164,11 +1164,11 @@ Welche Basisklasse haben die Wrapper-Klassen `Byte`, `Short`, `Integer`, `Long`,
 
 
 
-( ) A. Number.
+(X) A. Number.
        
 ( ) B. Numeric.
        
-( ) C. Comparable.
+( ) C. Comparable. // interface
        
 ( ) D. Sie alle erweitern direkt die Klasse `Object`. 
        
@@ -1187,7 +1187,7 @@ Welches Interface implementieren alle Wrapper-Klassen?
        
 ( ) B. Numeric.
        
-( ) C. Comparable.
+(X) C. Comparable.
        
        
        
@@ -1201,11 +1201,11 @@ Welche Methoden deklariert oder definiert die Klasse java.lang.Number?
 
 
 
-[ ] A. int intValue()
+[X] A. int intValue()
        
 [ ] B. E getValue()
        
-[ ] C. floatValue()
+[X] C. float floatValue()
        
 [ ] D. double asDouble()
        
@@ -1240,7 +1240,7 @@ Wo gibt es Autounboxing?
        
 ( ) E. E.
        
-( ) F. F.
+(X) F. F.
        
        
        
@@ -1268,7 +1268,7 @@ Wo gibt es Autoboxing?
        
 ( ) B. B.
        
-( ) C. C.
+(C) C. C.
        
 ( ) D. D.
        
@@ -1286,8 +1286,8 @@ QUESTION 48
 
 Gibt es im folgenden Code Autoboxing und/oder Autounboxing?
      
-	Integer x = 1000;
-	x++;
+	Integer x = 1000; // boxing
+	x++; // unboxing
 
 
 
@@ -1295,7 +1295,7 @@ Gibt es im folgenden Code Autoboxing und/oder Autounboxing?
        
 ( ) B. nur Autounboxing
        
-( ) C. sowohl Autoboxing als auch Autounboxing
+(X) C. sowohl Autoboxing als auch Autounboxing
        
 ( ) D. weder Autoboxing noch Autounboxing
        
@@ -1316,7 +1316,7 @@ Was ist das Ergebnis?
 
 
 
-( ) A. true
+(X) A. true
        
 ( ) B. false
           
@@ -1331,13 +1331,13 @@ Für welche Wrapper-Klassen gibt es Konstanten-Pools?
 
 
 
-[ ] A. Byte
+[X] A. Byte
        
-[ ] B. Short
+[X] B. Short
        
-[ ] C. Integer
+[X] C. Integer
        
-[ ] D. Long
+[X] D. Long
        
 [ ] E. Float
        
@@ -1358,18 +1358,18 @@ Gegeben:
 	Integer d = 22;
 	Integer e = Integer.valueOf(22);
 	
-	System.out.print( a == b );
-	System.out.print( a == c );
-	System.out.print( c == d );
-	System.out.print( a == e );
-	System.out.print( c == e );
-	System.out.print( a.equals(e) );
+	System.out.print( a == b ); // false
+	System.out.print( a == c ); // false
+	System.out.print( c == d ); // true
+	System.out.print( a == e ); // false
+	System.out.print( c == e ); // true
+	System.out.print( a.equals(e) ); // true
 
 
 
 ( ) A. truetruetruetruetruetrue
        
-( ) B. falsefalsetruefalsetruetrue
+(X) B. falsefalsetruefalsetruetrue
        
 ( ) C. falsetruetruefalsetruetrue
        
@@ -1392,7 +1392,7 @@ Wie viele neue Integer-Objekte werden im folgenden Code auf dem Heap erzeugt?
        
 ( ) B. 1
        
-( ) C. 2
+(X) C. 2
        
        
        
@@ -1424,7 +1424,7 @@ Was ist das Ergebnis?
 
 ( ) A. int Integer double int 
        
-( ) B. int Integer double varargs 
+(X) B. int Integer double varargs 
        
 ( ) C. int Integer int int 
        
@@ -1442,7 +1442,7 @@ Gegeben:
 
 	LocalDate d1 = new LocalDate(); 			// A
 	LocalDate d2 = LocalDate.now();				// B
-	LocalDateTime t1 = date.atStartOfDay();	// C
+	LocalDateTime t1 = d2.atStartOfDay();	// C
 	LocalTime time = LocalTime.of(12, 3);		// D
 
 Welche Zeilen kompilieren?
@@ -1451,11 +1451,11 @@ Welche Zeilen kompilieren?
 
 [ ] A. A.
        
-[ ] B. B.
+[X] B. B.
        
-[ ] C. C.
+[X] C. C.
        
-[ ] D. D.
+[X] D. D.
        
        
 
@@ -1467,14 +1467,14 @@ QUESTION 55
 Gegeben:
 
 	LocalDate date = LocalDate.of(2019, 5, 23);
-	date.plusYears(2);
+	date.plusYears(2); // immutable
 	System.out.println(date.getYear());
 
 Was ist das Ergebnis?
 
 
 
-( ) A. 2019.
+(X) A. 2019.
        
 ( ) B. 2021.
        
@@ -1501,7 +1501,7 @@ Was ist das Ergebnis?
 
 ( ) A. 23.5.2019 - 00:00:00.
        
-( ) B. Exception.
+(X) B. Exception. // ist LocalDate
        
        
        
@@ -1514,7 +1514,7 @@ QUESTION 57
 Gegeben:
 
 	LocalDate start = LocalDate.now();
-	LocalDate end = startDateInclusive.plusDays(2);
+	LocalDate end = start.plusDays(2);
 	Period p = Period.between(start, end);
 	System.out.print(p.getDays());
 		
