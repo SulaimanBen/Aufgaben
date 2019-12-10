@@ -32,9 +32,9 @@ QUESTION 2
 Gegeben:
 
 	interface MyInterface {
-		void m1() {}				// A
+		void m1() {}			// A
 		default void m2() {}	// B
-		void m3();					// C
+		void m3();				// C
 		static void m4() {} 	// D
 		static void m5(); 		// E
 	}

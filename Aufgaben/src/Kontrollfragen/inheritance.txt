@@ -821,7 +821,7 @@ Was ist richtig?
 
 [ ] A. 800 800 800.
        
-[A] B. Compilerfehler in der Zeile A.
+[X] B. Compilerfehler in der Zeile A.
        
 [X] C. Compilerfehler in der Zeile B.
        

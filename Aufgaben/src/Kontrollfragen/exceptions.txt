@@ -478,15 +478,15 @@ Was könnte das Ergebnis sein, wenn die Methode `test` aufgerufen wird?
 
 
 
-[ ] A. a b c
+[X] A. a b c
        
 [C] B. b c
        
 [X] C. a c
        
-[ ] D. c gefolgt von einem Error
+[X] D. c gefolgt von einem Error
        
-[ ] E. keine Ausgaben, die Anwendung friert ein.
+[X] E. keine Ausgaben, die Anwendung friert ein.
        
        
 
