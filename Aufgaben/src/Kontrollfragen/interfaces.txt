@@ -164,7 +164,7 @@ Welche Zeilen kompilieren nicht mit Java 11? (Private Methoden sind in einem Int
        
 [X] D. D.
        
-[X] E. E.
+[ ] E. E.
        
 [X] F. F.
        
